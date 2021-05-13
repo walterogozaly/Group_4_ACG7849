@@ -1,3 +1,6 @@
+import requests
+r = requests.get('https://api.coinmarketcap.com/data-api/v3/topsearch/rank')
 
-
-print("You made it")
+# get top searches
+top = r.json()["data"]["cryptoTopSearchRanks"]
+top
